@@ -1,6 +1,6 @@
 FROM phusion/baseimage:0.9.17
 
-MAINTAINER David Coppit <david@coppit.org>
+MAINTAINER Wayne Hartmann <wayne@bitstorm.pw>
 
 ENV DEBIAN_FRONTEND noninteractive
 
