@@ -10,7 +10,7 @@ if [[ ! -e "/config/lists" ]]
 then
   echo "$(ts) Copying configuration to /config"
 
-  cp -ra /etc/dansguardian/lists /config
+  cp -ra /etc/dansguardian/* /config
 fi
 
 #-----------------------------------------------------------------------------------------------------------------------
@@ -21,8 +21,8 @@ echo "$(ts) Starting DansGuardian container..."
 
 [[ "$PROXYPORT" != "" ]] && sed -i "s/^proxyport *=.*/proxyport = $PROXYPORT/" /etc/dansguardian/dansguardian.conf
 
-rm -rf /etc/dansguardian/lists
-ln -s /config/lists /etc/dansguardian/lists
+rm -rf /etc/dansguardian
+ln -s /config /etc/dansguardian
 
 squid3 start
 service dansguardian start
