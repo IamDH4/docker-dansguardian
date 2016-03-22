@@ -8,8 +8,6 @@ This image is based on `coppit/dansguardian`. The key difference is the entire c
 Usage
 =====
 
-This docker image is available as a [trusted build on the docker index](https://hub.docker.com/r/coppit/dansguardian/).
-
 Run:
 
 `sudo docker run -d --name dansguardian -v /host/path:/config -p 9999:8080 -t iamdh4/dansguardian`
