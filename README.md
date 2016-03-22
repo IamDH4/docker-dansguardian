@@ -30,4 +30,4 @@ By default, this container uses an internal Squid proxy. If you want to use a di
 `sudo docker run -d --name dansguardian -v /host/path:/config -p 9999:8080 -e PROXYIP=192.168.1.100 -e PROXYPORT=8118 -t iamdh4/dansguardian`
 
 
-You can control what DansGuardian blocks by editing the files in the lists subdirectory of your config directory. For more information, see the [DansGuardian documentation](http://dansguardian.org/downloads/detailedinstallation2.4.html#further).
+You can control what DansGuardian blocks by editing the files in the config directory. For more information, see the [DansGuardian documentation](http://dansguardian.org/downloads/detailedinstallation2.4.html#further).
