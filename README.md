@@ -3,6 +3,8 @@ docker-dansguardian
 
 This is a Docker container for running [DansGuardian](http://dansguardian.org/). DansGuardian is a proxy that filters web content using a variety of methods.
 
+This image is based on `coppit/dansguardian`. The key difference is the entire config folder is exposed at `/config` instead of just the lists. If you are migrating from coppit's release, you will need to remove the lists folder, or backup somewhere else when initializing your first container. Otherwise the startup script will not copy all the required config files to your specified path.
+
 Usage
 =====
 
