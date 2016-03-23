@@ -10,16 +10,18 @@ Usage
 
 Run:
 
-`sudo docker run -d --name dansguardian -v /host/path:/config -p 9999:8080 -t iamdh4/dansguardian`
-
+```
+sudo docker run -d --name dansguardian -v /host/path:/config -p 9999:8080 -t iamdh4/dansguardian
+```
 Replace /host/path with the path in which to store the configuration. Replace 9999 with the port you wish to set as your proxy port in order to filter using DansGuardian.
 
 After starting the container, update your network connection or web browser to use the IP address of your docker host and port 9999 (or whatever you chose) as the proxy.
 
 To check the status, run:
 
-`docker logs dansguardian`
-
+```
+docker logs dansguardian
+```
 Configuration
 =============
 
