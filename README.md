@@ -25,7 +25,14 @@ Configuration
 
 By default, this container uses an internal Squid proxy. If you want to use a different proxy, configure the PROXYIP and PROXYPORT environment variables, like so:
 
-`sudo docker run -d --name dansguardian -v /host/path:/config -p 9999:8080 -e PROXYIP=192.168.1.100 -e PROXYPORT=8118 -t iamdh4/dansguardian`
-
+```
+sudo docker run -d --name dansguardian -v /host/path:/config -p 9999:8080 -e PROXYIP=192.168.1.100 -e PROXYPORT=8118 -t iamdh4/dansguardian`
+```
 
 You can control what DansGuardian blocks by editing the files in the config directory. For more information, see the [DansGuardian documentation](http://dansguardian.org/downloads/detailedinstallation2.4.html#further).
+
+After modifying the configuration files, you need to restart the dansguardian service. This can be done without restarting the entire container by running:
+```
+sudo docker exec dansguardian dg-reload
+```
+**Replace `dansguardian` with the name or ID of your container.**

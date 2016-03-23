@@ -21,6 +21,10 @@ RUN set -x \
 RUN sed -i "/^UNCONFIGURED/ d" /etc/dansguardian/dansguardian.conf
 RUN echo 'always_direct allow all' >> /etc/squid3/squid.conf
 
+RUN set -x \
+  && curl -o /usr/bin/dg-reload https://raw.githubusercontent.com/IamDH4/docker-dansguardian/master/dg-reload.sh \
+  && chmod +x /usr/bin/dg-reload
+
 # Create dir to keep things tidy
 RUN mkdir /files
 
