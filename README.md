@@ -37,4 +37,4 @@ After modifying the configuration files, you need to restart the dansguardian se
 ```
 sudo docker exec dansguardian dg-reload
 ```
-**Replace `dansguardian` with the name or ID of your container.**
+*Replace `dansguardian` with the name or ID of your container.*
